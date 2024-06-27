@@ -7,6 +7,9 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to="products/")
     created_at = models.DateTimeField(auto_now_add=True)
+    category = models.ForeignKey(
+        "Category", null=True, on_delete=models.CASCADE, related_name="related_products"
+    )
 
     def __str__(self):
         return self.title
@@ -14,7 +17,6 @@ class Product(models.Model):
 
 class Category(models.Model):
     title = models.CharField(max_length=255)
-    products = models.ManyToManyField(Product)
 
     def __str__(self):
         return self.title

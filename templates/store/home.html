@@ -1,4 +1,8 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
     <h1>Hello from the store</h1>
+
+    {% for category in categories %}
+        <a href="{% url 'list_products' category.title %}">{{ category.title }}</a>
+    {% endfor %}
 {% endblock %}

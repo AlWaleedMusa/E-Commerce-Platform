@@ -1,0 +1,7 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+    {% for product in products %}
+        <a href="{% url 'product_detail' product.id %}">{{ product.title }}</a>
+        <img style="width: 100px; height: 100px;" src="{{ product.image.url }}" alt="">
+    {% endfor %}
+{% endblock %}
