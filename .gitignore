@@ -1,0 +1,6 @@
+__pycache__
+.env
+e-commerce-env/
+db.sqlite3
+migrations/
+media/

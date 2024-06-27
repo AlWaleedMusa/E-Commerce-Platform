@@ -1,0 +1,9 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<h4>{{ details.title }}</h4>
+<h4>{{ details.description }}</h4>
+<h4>{{ details.price }}</h4>
+<img style="width: 80px; height: 90px;" src="{{ details.image.url }}" alt="">
+
+{% endblock %}
